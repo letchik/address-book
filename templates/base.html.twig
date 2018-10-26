@@ -3,10 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/semantic-ui.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+        {% endblock %}
     </head>
     <body>
+        <div class="ui container">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        </div>
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('build/app.js') }}"/>
+        {% endblock %}
     </body>
 </html>
