@@ -9,9 +9,9 @@ class CountryExtension extends \Twig_Extension
 {
     public function getFilters()
     {
-        return array(
-            new \Twig_SimpleFilter('country', array($this, 'getCountryByCode')),
-        );
+        return [
+            new \Twig_SimpleFilter('country', [$this, 'getCountryByCode']),
+        ];
     }
 
     public function getCountryByCode($countryCode, $locale = "en")

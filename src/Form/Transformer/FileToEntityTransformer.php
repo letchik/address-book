@@ -4,7 +4,6 @@ namespace App\Form\Transformer;
 
 
 use App\Entity\File;
-use Doctrine\ORM\EntityManagerInterface;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
@@ -12,21 +11,18 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FileToEntityTransformer implements DataTransformerInterface
 {
-    private $entityManager;
-
     private $fileStoragePath;
 
-    public function __construct(EntityManagerInterface $entityManager, $fileStoragePath)
+    public function __construct($fileStoragePath)
     {
-        $this->entityManager = $entityManager;
         $this->fileStoragePath = $fileStoragePath;
     }
 
     /**
-     * Transforms an File to Object.
+     * Transforms a File to Symfony File.
      *
      * @param  File $file
-     * @return string
+     * @return \Symfony\Component\HttpFoundation\File\File
      */
     public function transform($file)
     {
@@ -51,7 +47,7 @@ class FileToEntityTransformer implements DataTransformerInterface
             return;
         }
         $file = new File();
-        $file->setMime($uploadedFile->getClientMimeType());
+        $file->setMime($uploadedFile->getMimeType());
         $uuid = Uuid::uuid4()->toString();
         $file->setKey($uuid);
         $fileName = "{$uuid}.{$uploadedFile->guessExtension()}";
