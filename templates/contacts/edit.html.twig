@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1 class="ui center aligned icon header">
+        <i class="circular user icon"></i>
+        {% if form.vars.value.id %}
+            Edit contact {{ form.vars.value.firstName }} {{ form.vars.value.lastName }}
+        {% else %}
+            New contact
+        {% endif %}
+    </h1>
+    <div class="ui container">
+        <section>
+            <a class="ui red ribbon label" href="{{ url('contacts.list') }}">Back</a>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+    </div>
+    </section>
+{% endblock %}

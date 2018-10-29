@@ -1,22 +1,28 @@
 <div class="card">
     <div class="image">
-        <img src="{{ asset('build/images/fallback-avatar.png') }}">
+        <img src="{% if contact.avatar is not empty %}/files/{{ contact.avatar.filename }}{% else %}{{ asset('build/images/fallback-avatar.png') }}{% endif %}">
     </div>
     <div class="content">
         <div class="header">
             {{ contact.firstName }} {{ contact.lastName }}
         </div>
         <div class="meta">
-            {#Friends of Veronika#}
+            {{ contact.email }}
+        </div>
+        <div class="meta">
+            {{ contact.phone }}
         </div>
         <div class="description">
-            {#Elliot requested permission to view your contact details#}
+            <p>{{ contact.zip }}, {{ contact.country | country(app.request.locale) }}, {{ contact.city }}</p>
+            <p>{{ contact.address }}</p>
         </div>
     </div>
     <div class="extra content">
         <div class="ui two buttons">
-            <div class="ui basic blue button"><i class="icon edit"></i>Edit</div>
-            <div class="ui basic red button"><i class="icon delete"></i>Delete</div>
+            <a href="{{ url('contacts.edit', {id: contact.id}) }}" class="ui basic blue button"><i
+                        class="icon edit"></i>Edit</a>
+            <a href="{{ url('contacts.delete', {id: contact.id}) }}" class="ui basic red button"><i
+                        class="icon delete"></i>Delete</a>
         </div>
     </div>
 </div>

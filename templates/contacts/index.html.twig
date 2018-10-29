@@ -1,14 +1,16 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Address book{% endblock %}
 {% block body %}
-    <h1>Address book</h1>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
-    <div class="ui cards">
-        {% set contact={'firstName' : 'Steve', 'lastName' : 'Jobs'} %}
-        {{ include('contacts/contact-card.html.twig', { 'contact': contact }) }}
-        {{ include('contacts/contact-card.html.twig', { 'contact': contact }) }}
-    </div>
+    <h1 class="ui center aligned icon header">
+        <i class="circular users icon"></i>
+        Address book
+    </h1>
+    <a href="{{ url('contacts.add') }}" class="ui button teal"><i class="user plus icon"></i> Add contact</a>
+    <section>
+        <div class="ui cards">
+            {% for contact in contacts %}
+                {{ include('contacts/contact-card.html.twig', { 'contact': contact }) }}
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

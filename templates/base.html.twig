@@ -10,7 +10,9 @@
     </head>
     <body>
         <div class="ui container">
-        {% block body %}{% endblock %}
+            <section>
+                {% block body %}{% endblock %}
+            </section>
         </div>
         {% block javascripts %}
             <script type="text/javascript" src="{{ asset('build/app.js') }}"/>

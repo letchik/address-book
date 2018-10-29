@@ -1,7 +1,11 @@
-padding-top: 40px;
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 body {
 }
 
-.ui.container {
-
+.card .image img{
+    width: 290px !important;
+    height: 290px !important;
 }
