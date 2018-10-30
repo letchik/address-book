@@ -12,7 +12,7 @@
 - `yarn encore dev` or `npm run encore dev`
 - `bin/console doctrine:migrations:migrate`
 - `bin/console server:run`
-- go to http://localhost:8000
+- go to http://localhost:8000/contacts
 
 # Tests
 Just run `phpunit` from the root folder.
