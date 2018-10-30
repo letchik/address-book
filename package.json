@@ -3,6 +3,9 @@
         "@symfony/webpack-encore": "^0.20.0",
         "webpack-notifier": "^1.6.0"
     },
+    "dependencies": {
+        "semantic-ui-css": "^2.4.1"
+    },
     "license": "UNLICENSED",
     "private": true,
     "scripts": {

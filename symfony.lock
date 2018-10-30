@@ -128,9 +128,6 @@
     "ramsey/uuid": {
         "version": "3.8.0"
     },
-    "semantic/ui": {
-        "version": "2.4.1"
-    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {

@@ -20,7 +20,7 @@ Encore
     .addEntry('app', './assets/js/app.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
-    .addStyleEntry('semantic-ui', './node_modules/semantic-ui/dist/semantic.css')
+    .addStyleEntry('semantic-ui', './node_modules/semantic-ui-css/semantic.min.css')
 
     /*
      * FEATURE CONFIG

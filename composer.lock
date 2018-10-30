@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a0a7a5dc922df81066a85ea3cf209ea",
+    "content-hash": "ed3ae880ba4574897597df68efed778d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1999,43 +1999,6 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
-        },
-        {
-            "name": "semantic/ui",
-            "version": "2.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Semantic-Org/Semantic-UI.git",
-                "reference": "a753d5b7841ab6adbe6d8a3b40086b452f0ba715"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Semantic-Org/Semantic-UI/zipball/a753d5b7841ab6adbe6d8a3b40086b452f0ba715",
-                "reference": "a753d5b7841ab6adbe6d8a3b40086b452f0ba715",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jack Lukic",
-                    "email": "jacklukic@gmail.com",
-                    "homepage": "http://www.jacklukic.com",
-                    "role": "Creator"
-                }
-            ],
-            "description": "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
-            "homepage": "http://www.semantic-ui.com",
-            "keywords": [
-                "css",
-                "framework",
-                "semantic",
-                "ui"
-            ],
-            "time": "2018-10-13T22:51:35+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
