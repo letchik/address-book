@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('build/semantic-ui.css') }}">
-            <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/semantic/semantic.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/app.css') }}">
         {% endblock %}
     </head>
     <body>
@@ -15,7 +15,6 @@
             </section>
         </div>
         {% block javascripts %}
-            <script type="text/javascript" src="{{ asset('build/app.js') }}"/>
         {% endblock %}
     </body>
 </html>
