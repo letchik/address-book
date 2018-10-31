@@ -8,8 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ContactsController extends AbstractController
 {
+
+
     /**
      * @Route("/contacts", name="contacts.list")
+     * @Route("/", name="contacts.list.alias")
      */
     public function index()
     {
