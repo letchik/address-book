@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Tests\Entity;
+namespace AppBundle\Tests\Entity;
 
-use App\Entity\File;
+use AppBundle\Entity\File;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use PHPUnit\Framework\TestCase;
 use Mockery as m;

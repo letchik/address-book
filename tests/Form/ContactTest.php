@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Tests;
+namespace AppBundle\Tests;
 
-use App\Entity\Contact;
-use App\Entity\File;
-use App\Form\Transformer\FileToEntityTransformer;
+use AppBundle\Entity\Contact;
+use AppBundle\Entity\File;
+use AppBundle\Form\Transformer\FileToEntityTransformer;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 use Symfony\Component\Form\Form;
 use Symfony\Component\Form\PreloadedExtension;
@@ -46,7 +46,7 @@ class ContactTest extends TypeTestCase
 
     protected function getExtensions()
     {
-        $type = new \App\Form\Contact($this->fileToEntityTransformer);
+        $type = new \AppBundle\Form\Contact($this->fileToEntityTransformer);
         $validator = m::mock(ValidatorInterface::class);
         $validator
             ->shouldReceive('validate')
@@ -77,7 +77,7 @@ class ContactTest extends TypeTestCase
         );
 
         $actual = new Contact();
-        $form = $this->factory->create(\App\Form\Contact::class, $actual);
+        $form = $this->factory->create(\AppBundle\Form\Contact::class, $actual);
 
         $expected = new Contact();
         $expected->setAddress('Streetname, 40');

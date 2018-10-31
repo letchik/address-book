@@ -6,10 +6,10 @@
  * Time: 00:20
  */
 
-namespace App\Tests\Twig;
+namespace AppBundle\Tests\Twig;
 
 
-use App\Twig\CountryExtension;
+use AppBundle\Twig\CountryExtension;
 use PHPUnit\Framework\TestCase;
 
 class CountryExtensionTest extends TestCase

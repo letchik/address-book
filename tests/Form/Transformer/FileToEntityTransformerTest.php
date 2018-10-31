@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests\Form\Transformer;
+namespace AppBundle\Tests\Form\Transformer;
 
-use App\Entity\File;
-use App\Form\Transformer\FileToEntityTransformer;
+use AppBundle\Entity\File;
+use AppBundle\Form\Transformer\FileToEntityTransformer;
 use PHPUnit\Framework\TestCase;
 use Mockery as m;
 use Ramsey\Uuid\Uuid;

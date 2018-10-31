@@ -7,16 +7,20 @@
 # upd:
 - I removed Webpack Encore dependency since NodeJS is not allowed. On the other side, Webpack Encore is a recommended bundling tool even for Symfony 3.4 (https://symfony.com/doc/3.4/frontend.html). That's not clear for me why NodeJS is still an issue. 
 
+# upd 2: 
+- Since the answer for the question about symfony and php versions strictness was misunderstood, I've used symfony 4.
+So I switched symfony version and made it work under php7.0
+
 # Installation
 - `git clone https://github.com/letchik/address-book.git`
 - `cd address-book`
 - `composer install`
-- `bin/console doctrine:migrations:migrate`
+- `bin/console doctrine:scheme:update --force`
 - `bin/console server:run`
 - go to http://localhost:8000/contacts
 
 # Tests
-Just run `bin/phpunit` from the root folder.
+Just run `vendor/bin/phpunit` from the root folder.
 
 --
 
